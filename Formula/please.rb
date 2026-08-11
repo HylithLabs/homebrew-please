@@ -1,25 +1,25 @@
 class Please < Formula
   desc "An AI-native git CLI. You never type raw git commands."
   homepage "https://github.com/HylithLabs/please"
-  version "0.1.5"
+  version "0.1.6"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/HylithLabs/please/releases/download/v0.1.5/please-aarch64-apple-darwin.tar.xz"
-      sha256 "ed37137848d7810f4369329b88d74b31886e499586c68520d497c667386e2074"
+      url "https://github.com/HylithLabs/please/releases/download/0.1.6/please-aarch64-apple-darwin.tar.xz"
+      sha256 "98f05d46ebf4c28f12f4a006d2271ff8308783a5cf74c76f8f9613a982fb4a0a"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/HylithLabs/please/releases/download/v0.1.5/please-x86_64-apple-darwin.tar.xz"
-      sha256 "7acc92a9ee0b21b4ed9a1b569da1584dfe3cf07baac13e8313ef774b99fa3562"
+      url "https://github.com/HylithLabs/please/releases/download/0.1.6/please-x86_64-apple-darwin.tar.xz"
+      sha256 "11a9366c8487ed610d25a1a850c39d990e7a7320353d6f9831ecade6acf6bfb5"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/HylithLabs/please/releases/download/v0.1.5/please-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "1c5cc1f1782c80191a1b99ab3d93958f381ded428cddf0f1614cc2ea72b03636"
+      url "https://github.com/HylithLabs/please/releases/download/0.1.6/please-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "787303fc0b1dcc0318234a4f78c596a67925f4c456b4d151d5d48f8ed93368f8"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/HylithLabs/please/releases/download/v0.1.5/please-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "1803c4a2636df0e87f958ac99d5ad79a0c031b83721f1acb20bef0bc754fe05f"
+      url "https://github.com/HylithLabs/please/releases/download/0.1.6/please-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "0cc9eada44d8b0798938f68b4a4fe0d197d584bd0397515f77f843e441b1d97a"
     end
   end
   license "Apache-2.0"
@@ -48,10 +48,18 @@ class Please < Formula
   end
 
   def install
-    bin.install "please" if OS.mac? && Hardware::CPU.arm?
-    bin.install "please" if OS.mac? && Hardware::CPU.intel?
-    bin.install "please" if OS.linux? && Hardware::CPU.arm?
-    bin.install "please" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "please"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "please"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "please"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "please"
+    end
 
     install_binary_aliases!
 
