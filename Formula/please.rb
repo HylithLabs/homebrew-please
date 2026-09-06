@@ -1,25 +1,25 @@
 class Please < Formula
   desc "An AI-native git CLI. You never type raw git commands."
   homepage "https://github.com/HylithLabs/please"
-  version "2.0.0"
+  version "2.1.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/HylithLabs/please/releases/download/2.0.0/please-aarch64-apple-darwin.tar.xz"
-      sha256 "77e3196e5cce4b2ab7bc3055100af1fd8583cd85db629927af625b661d2738f7"
+      url "https://github.com/HylithLabs/please/releases/download/2.1.0/please-aarch64-apple-darwin.tar.xz"
+      sha256 "c8116fe024c3e5c40ccdf12f6a17a8ae35632956012bff2cc762b58c8eb48801"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/HylithLabs/please/releases/download/2.0.0/please-x86_64-apple-darwin.tar.xz"
-      sha256 "f611948e1e9c3b1b91023b244e47dc129c41d12695b873d64442d66b71844de3"
+      url "https://github.com/HylithLabs/please/releases/download/2.1.0/please-x86_64-apple-darwin.tar.xz"
+      sha256 "240d0f2a294285dbfbed32b0c51bdc2a367de715e99cff97ae0adb7eb32abc44"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/HylithLabs/please/releases/download/2.0.0/please-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "fa90528f62d7ff215816259a28472aff9dd1ce6c1df7531d4e1a7d797949656b"
+      url "https://github.com/HylithLabs/please/releases/download/2.1.0/please-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "ae8b541f3313302d815953ffba047948afb60c350518993358cb5ec80df7c7d6"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/HylithLabs/please/releases/download/2.0.0/please-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "3ac126b54916230955cf491ef7bedfdcd04e371eee9aa9e44984ef99b7266e08"
+      url "https://github.com/HylithLabs/please/releases/download/2.1.0/please-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "47ae136ced4a043e755adbd54731c4eddaa32fd8eaeecd44d0a44ca36340df86"
     end
   end
   license "Apache-2.0"
